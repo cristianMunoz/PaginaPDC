@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Moon, Sun, Globe, Menu, X } from 'lucide-react';
 
 import churchLogo from '../assets/media__1772557959477.jpg';
-import adLogo from '../assets/ad_logo_final.jpg';
+import adLogo from '../assets/ad_logo_white.png';
 
 const Navbar = () => {
     const { t, i18n } = useTranslation();
@@ -59,7 +59,7 @@ const Navbar = () => {
                     <img
                         src={adLogo}
                         alt="Logo Asambleas de Dios"
-                        className="logo-ad"
+                        className="logo-ad-white"
                         style={{
                             height: isScrolled ? '28px' : '35px',
                             transition: 'height 0.3s ease'
