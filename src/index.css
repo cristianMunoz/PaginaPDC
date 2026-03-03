@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
+
+:root {
+  --primary: #DC2626;
+  --primary-dark: #B91C1C;
+  --accent: #F59E0B;
+  --bg-main: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --border-color: #E5E7EB;
+}
+
+html.dark {
+  --primary: #EF4444;
+  --primary-dark: #DC2626;
+  --accent: #FBBF24;
+  --bg-main: #0F172A;
+  --bg-surface: #1E293B;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --border-color: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 130px;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover.nav-link {
+  color: var(--primary) !important;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Glass is no longer used for the top-level navbar due to blend-mode issues, but kept for widgets */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background 0.3s ease;
+}
+
+html.dark .glass {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.70) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+html.dark .glass-nav {
+  background: rgba(15, 23, 42, 0.75) !important;
+}
+
+.surface {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+html.dark .surface {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(220, 38, 38, 0.4);
+}
+
+.btn-icon {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-icon:hover {
+  background: var(--bg-surface);
+  transform: scale(1.05);
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-field:focus {
+  border-color: var(--primary);
+}
+
+/* Solid background + pure CSS inverse blending eliminates all graphic anomalies */
+.logo-church {
+  mix-blend-mode: multiply;
+  filter: invert(1) hue-rotate(180deg);
+  transition: filter 0.3s ease;
+  height: 75px;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+html.dark .logo-church {
+  mix-blend-mode: screen;
+  filter: none;
+}
+
+.logo-ad {
+  mix-blend-mode: multiply;
+  filter: invert(1);
+  transition: filter 0.3s ease;
+  height: 35px;
+  max-width: 140px;
+  object-fit: contain;
+}
+
+html.dark .logo-ad {
+  mix-blend-mode: screen;
+  filter: none;
+}
+
+/* Responsive Media Queries for Mobile & Tablets */
+@media (max-width: 992px) {
+  .logo-church {
+    height: 100px;
+  }
+
+  .logo-divider {
+    height: 40px !important;
+  }
+
+  .logo-ad {
+    height: 38px;
+  }
+
+  .nav-actions {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block !important;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: var(--bg-surface);
+    padding: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.4s ease-in-out;
+  }
+
+  .nav-links.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .nav-actions {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .logo-church {
+    height: 80px;
+  }
+
+  .logo-divider {
+    height: 30px !important;
+  }
+
+  .logo-ad {
+    height: 32px;
+  }
+}
