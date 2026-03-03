@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Moon, Sun, Globe, Menu, X } from 'lucide-react';
 
 import churchLogo from '../assets/media__1772557959477.jpg';
-import adLogo from '../assets/ad_logo_true.png';
+import adLogo from '../assets/asambleas_logo.png';
 
 const Navbar = () => {
     const { t, i18n } = useTranslation();
