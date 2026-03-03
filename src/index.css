@@ -171,8 +171,6 @@ html.dark .logo-church {
 }
 
 .logo-ad {
-  mix-blend-mode: multiply;
-  filter: invert(1);
   transition: filter 0.3s ease;
   height: 35px;
   max-width: 140px;
@@ -180,8 +178,7 @@ html.dark .logo-church {
 }
 
 html.dark .logo-ad {
-  mix-blend-mode: screen;
-  filter: none;
+  filter: invert(1);
 }
 
 /* Responsive Media Queries for Mobile & Tablets */
