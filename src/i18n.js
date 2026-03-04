@@ -40,7 +40,7 @@ const resources = {
                 "sat_desc": "Ayuno y Oración",
                 "sun": "Domingo",
                 "sun_desc": "Escuela Dominical",
-                "footer_note": "Conserjería con cita previa al número de contacto de la iglesia."
+                "footer_note": "Consejería con cita previa al número de contacto de la iglesia."
             },
             "leadership": {
                 "title": "Liderazgo",
