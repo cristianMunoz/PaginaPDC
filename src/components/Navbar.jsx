@@ -49,12 +49,12 @@ const Navbar = () => {
                         alt="Logo Iglesia"
                         className="logo-church"
                         style={{
-                            height: isScrolled ? '60px' : '75px',
+                            height: isScrolled ? '75px' : '100px',
                             transition: 'height 0.3s ease'
                         }}
                     />
 
-                    <div className="logo-divider" style={{ width: '2px', height: isScrolled ? '35px' : '40px', background: 'var(--border-color)', margin: '0 0.5rem', transition: 'height 0.3s ease' }}></div>
+                    <div className="logo-divider" style={{ width: '2px', height: isScrolled ? '45px' : '55px', background: 'var(--border-color)', margin: '0 0.5rem', transition: 'height 0.3s ease' }}></div>
 
                     <img
                         src={adLogo}
