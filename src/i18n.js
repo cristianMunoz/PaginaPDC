@@ -8,6 +8,7 @@ const resources = {
                 "home": "Inicio",
                 "events": "Eventos",
                 "about": "Nosotros",
+                "leadership": "Liderazgo",
                 "schedule": "Horarios",
                 "contact": "Contacto",
                 "visit": "Visítanos"
@@ -91,6 +92,7 @@ const resources = {
                 "home": "Home",
                 "events": "Events",
                 "about": "About Us",
+                "leadership": "Leadership",
                 "schedule": "Schedule",
                 "contact": "Contact",
                 "visit": "Visit Us"
