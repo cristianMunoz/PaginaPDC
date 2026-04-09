@@ -80,6 +80,7 @@ const Navbar = () => {
 
                 <div className={`nav-links ${isMenuOpen ? 'active' : ''}`} style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
                     <a href="#inicio" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: '1.05rem', color: 'var(--text-primary)', transition: 'color 0.2s' }} className="nav-link">{t('navbar.home')}</a>
+                    <a href="#eventos" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: '1.05rem', color: 'var(--text-primary)', transition: 'color 0.2s' }} className="nav-link">{t('navbar.events')}</a>
                     <a href="#nosotros" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: '1.05rem', color: 'var(--text-primary)', transition: 'color 0.2s' }} className="nav-link">{t('navbar.about')}</a>
                     <a href="#horarios" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: '1.05rem', color: 'var(--text-primary)', transition: 'color 0.2s' }} className="nav-link">{t('navbar.schedule')}</a>
                     <a href="#contacto" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: '1.05rem', color: 'var(--text-primary)', transition: 'color 0.2s' }} className="nav-link">{t('navbar.contact')}</a>

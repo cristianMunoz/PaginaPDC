@@ -7,6 +7,7 @@ import Leadership from './components/Leadership';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollReveal from './components/ScrollReveal';
+import Events from './components/Events';
 
 function App() {
   return (
@@ -15,13 +16,16 @@ function App() {
       <main style={{ flexGrow: 1, overflowX: 'hidden' }}>
         <Hero />
         <ScrollReveal>
+          <Events />
+        </ScrollReveal>
+        <ScrollReveal>
           <About />
         </ScrollReveal>
         <ScrollReveal>
-          <Schedule />
+          <Leadership />
         </ScrollReveal>
         <ScrollReveal>
-          <Leadership />
+          <Schedule />
         </ScrollReveal>
         <ScrollReveal>
           <Contact />

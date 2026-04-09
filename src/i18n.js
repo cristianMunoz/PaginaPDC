@@ -6,6 +6,7 @@ const resources = {
         translation: {
             "navbar": {
                 "home": "Inicio",
+                "events": "Eventos",
                 "about": "Nosotros",
                 "schedule": "Horarios",
                 "contact": "Contacto",
@@ -18,6 +19,7 @@ const resources = {
             },
             "about": {
                 "title": "Identidad",
+                "main_title": "Nuestra Identidad",
                 "mission_title": "Nuestra Misión",
                 "mission_desc": "Somos una Iglesia que proclama la Palabra de Dios; comprometida con la evangelización y transformación de nuestra comunidad.",
                 "vision_title": "Nuestra Visión",
@@ -42,12 +44,20 @@ const resources = {
                 "sun_desc": "Escuela Dominical",
                 "footer_note": "Consejería con cita previa al número de contacto de la iglesia."
             },
+            "events_section": {
+                "tag": "¡No te lo pierdas!",
+                "title": "Próximos Eventos",
+                "empty": "No hay eventos próximos por el momento."
+            },
             "leadership": {
                 "title": "Liderazgo",
+                "main_title": "Nuestro Liderazgo",
+                "desc": "Nos guían espiritualmente bajo la cobertura de las Asambleas de Dios, sirviendo con amor a la congregación en nuestras diferentes sedes.",
                 "pastor_name": "Pastor Alex Gomez",
                 "pastor_title": "Pastor Principal",
                 "description": "Nos guía espiritualmente bajo la cobertura de las Asambleas de Dios, sirviendo con amor a la congregación y a la localidad de Usme.",
-                "fb_link": "Seguir en Facebook"
+                "fb_link": "Seguir",
+                "ig_link": "Seguir"
             },
             "contact": {
                 "title": "Contacto y Ubicación",
@@ -62,9 +72,13 @@ const resources = {
                 "email_ph": "tu@email.com",
                 "form_phone": "Teléfono",
                 "form_phone_ph": "Tu número de contacto",
-                "message": "Mensaje",
+                "message": "Mensaje o petición",
                 "message_ph": "¿En qué te podemos ayudar?",
-                "submit": "Enviar Mensaje"
+                "submit": "Enviar Mensaje",
+                "val_required": "Este campo es obligatorio.",
+                "val_name": "Por favor, ingresa un nombre válido (solo letras y espacios).",
+                "val_email": "Por favor, incluye un '@' y un dominio válido.",
+                "val_phone": "Por favor, ingresa un número de teléfono válido."
             },
             "footer": {
                 "rights": "Iglesia Cristiana Puerta del Cielo. Todos los derechos reservados."
@@ -75,6 +89,7 @@ const resources = {
         translation: {
             "navbar": {
                 "home": "Home",
+                "events": "Events",
                 "about": "About Us",
                 "schedule": "Schedule",
                 "contact": "Contact",
@@ -87,6 +102,7 @@ const resources = {
             },
             "about": {
                 "title": "Identity",
+                "main_title": "Our Identity",
                 "mission_title": "Our Mission",
                 "mission_desc": "We are a Church that proclaims the Word of God; committed to the evangelization and transformation of our community.",
                 "vision_title": "Our Vision",
@@ -111,12 +127,20 @@ const resources = {
                 "sun_desc": "Sunday School",
                 "footer_note": "Counseling by appointment via the church contact number."
             },
+            "events_section": {
+                "tag": "Don't miss it!",
+                "title": "Upcoming Events",
+                "empty": "There are no upcoming events at the moment."
+            },
             "leadership": {
                 "title": "Leadership",
+                "main_title": "Our Leadership",
+                "desc": "They guide us spiritually under the covering of the Assemblies of God, serving the congregation with love across our different locations.",
                 "pastor_name": "Pastor Alex Gomez",
                 "pastor_title": "Lead Pastor",
                 "description": "Guides us spiritually under the covering of the Assemblies of God, serving the congregation and the Usme locality with love.",
-                "fb_link": "Follow on Facebook"
+                "fb_link": "Follow",
+                "ig_link": "Follow"
             },
             "contact": {
                 "title": "Contact and Location",
@@ -131,9 +155,13 @@ const resources = {
                 "email_ph": "you@email.com",
                 "form_phone": "Phone",
                 "form_phone_ph": "Your phone number",
-                "message": "Message",
+                "message": "Message or request",
                 "message_ph": "How can we help you?",
-                "submit": "Send Message"
+                "submit": "Send Message",
+                "val_required": "This field is required.",
+                "val_name": "Please enter a valid name (letters and spaces only).",
+                "val_email": "Please include an '@' and a valid domain.",
+                "val_phone": "Please enter a valid phone number."
             },
             "footer": {
                 "rights": "Christian Church Gate of Heaven. All rights reserved."
