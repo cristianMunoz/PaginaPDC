@@ -41,7 +41,7 @@ const Navbar = () => {
             borderBottom: '1px solid var(--border-color)',
             backgroundColor: isScrolled ? 'transparent' : 'var(--bg-surface)'
         }}>
-            <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', minHeight: isScrolled ? '70px' : '80px', padding: '5px 1.5rem', position: 'relative', transition: 'min-height 0.3s ease' }}>
+            <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', minHeight: isScrolled ? '55px' : '90px', padding: '5px 1.5rem', position: 'relative', transition: 'min-height 0.3s ease' }}>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'nowrap' }}>
                     <img
@@ -49,19 +49,19 @@ const Navbar = () => {
                         alt="Logo Iglesia"
                         className="logo-church"
                         style={{
-                            height: isScrolled ? '60px' : '100px',
+                            height: isScrolled ? '40px' : '100px',
                             transition: 'height 0.3s ease'
                         }}
                     />
 
-                    <div className="logo-divider" style={{ width: '2px', height: isScrolled ? '35px' : '55px', background: 'var(--border-color)', margin: '0 0.5rem', transition: 'height 0.3s ease' }}></div>
+                    <div className="logo-divider" style={{ width: '2px', height: isScrolled ? '25px' : '55px', background: 'var(--border-color)', margin: '0 0.5rem', transition: 'height 0.3s ease' }}></div>
 
                     <img
                         src={adLogo}
                         alt="Logo Asambleas de Dios"
                         className="logo-ad-white"
                         style={{
-                            height: isScrolled ? '28px' : '35px',
+                            height: isScrolled ? '22px' : '35px',
                             transition: 'height 0.3s ease'
                         }}
                         onError={(e) => {
