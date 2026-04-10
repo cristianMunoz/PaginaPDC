@@ -16,7 +16,8 @@ const resources = {
             "hero": {
                 "title": "Iglesia Cristiana Puerta del Cielo",
                 "subtitle": "Una iglesia conformada por gente que ama a Dios y a su prójimo. Bienvenidos a nuestra familia, sede central Santa Librada.",
-                "btn": "Conoce nuestros horarios"
+                "btn": "Conoce nuestros horarios",
+                "follow": "Síguenos en nuestras redes sociales"
             },
             "about": {
                 "title": "Identidad",

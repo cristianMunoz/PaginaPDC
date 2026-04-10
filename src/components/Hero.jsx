@@ -49,25 +49,32 @@ const Hero = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
+                    style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2.5rem' }}>
                     
                     <a href="#horarios" className="btn-primary" style={{ fontSize: '1.2rem', padding: '1rem 2.5rem' }}>
                         {t('hero.btn')}
                     </a>
 
-                    <a href="https://www.facebook.com/share/1Kq8YP8Mhk/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" 
-                       style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '3.5rem', height: '3.5rem', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', color: 'white', transition: 'all 0.3s ease', border: '1px solid rgba(255,255,255,0.2)' }} 
-                       onMouseOver={e => {e.currentTarget.style.backgroundColor = '#1877F2'; e.currentTarget.style.transform = 'scale(1.1)'; e.currentTarget.style.borderColor = '#1877F2';}} 
-                       onMouseOut={e => {e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';}}>
-                        <Facebook size={24} />
-                    </a>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+                        <p style={{ color: heroBg ? '#E2E8F0' : 'var(--text-secondary)', fontSize: '1.05rem', margin: 0, textShadow: heroBg ? '0 1px 2px rgba(0,0,0,0.5)' : 'none', fontWeight: '500', opacity: 0.9 }}>
+                            {t('hero.follow')}
+                        </p>
+                        <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
+                            <a href="https://www.facebook.com/share/1Kq8YP8Mhk/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" 
+                               style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '3.5rem', height: '3.5rem', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', color: 'white', transition: 'all 0.3s ease', border: '1px solid rgba(255,255,255,0.2)' }} 
+                               onMouseOver={e => {e.currentTarget.style.backgroundColor = '#1877F2'; e.currentTarget.style.transform = 'scale(1.1)'; e.currentTarget.style.borderColor = '#1877F2';}} 
+                               onMouseOut={e => {e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';}}>
+                                <Facebook size={24} />
+                            </a>
 
-                    <a href="https://www.instagram.com/ccristianapuertadelcielo?igsh=aGF1MzJibWlrd3Nj" target="_blank" rel="noopener noreferrer" 
-                       style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '3.5rem', height: '3.5rem', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', color: 'white', transition: 'all 0.3s ease', border: '1px solid rgba(255,255,255,0.2)' }} 
-                       onMouseOver={e => {e.currentTarget.style.background = 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)'; e.currentTarget.style.transform = 'scale(1.1)'; e.currentTarget.style.borderColor = 'transparent';}} 
-                       onMouseOut={e => {e.currentTarget.style.background = 'rgba(255,255,255,0.1)'; e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';}}>
-                        <Instagram size={24} />
-                    </a>
+                            <a href="https://www.instagram.com/ccristianapuertadelcielo?igsh=aGF1MzJibWlrd3Nj" target="_blank" rel="noopener noreferrer" 
+                               style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '3.5rem', height: '3.5rem', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', color: 'white', transition: 'all 0.3s ease', border: '1px solid rgba(255,255,255,0.2)' }} 
+                               onMouseOver={e => {e.currentTarget.style.background = 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)'; e.currentTarget.style.transform = 'scale(1.1)'; e.currentTarget.style.borderColor = 'transparent';}} 
+                               onMouseOut={e => {e.currentTarget.style.background = 'rgba(255,255,255,0.1)'; e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';}}>
+                                <Instagram size={24} />
+                            </a>
+                        </div>
+                    </div>
 
                 </motion.div>
             </div>
