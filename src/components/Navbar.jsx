@@ -41,28 +41,30 @@ const Navbar = () => {
             borderBottom: '1px solid var(--border-color)',
             backgroundColor: isScrolled ? 'transparent' : 'var(--bg-surface)'
         }}>
-            <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', minHeight: isScrolled ? '45px' : '90px', padding: isScrolled ? '2px 1.5rem' : '5px 1.5rem', position: 'relative', transition: 'all 0.3s ease' }}>
+            <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '2rem', minHeight: isScrolled ? '45px' : '90px', padding: isScrolled ? '2px 1.5rem' : '5px 1.5rem', position: 'relative', transition: 'all 0.3s ease' }}>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'nowrap' }}>
+                <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'nowrap', flexShrink: 0 }}>
                     <img
                         src={churchLogo}
                         alt="Logo Iglesia"
                         className="logo-church"
                         style={{
-                            height: isScrolled ? '32px' : '100px',
-                            transition: 'height 0.3s ease'
+                            height: isScrolled ? '36px' : '70px',
+                            transition: 'height 0.3s ease',
+                            objectFit: 'contain'
                         }}
                     />
 
-                    <div className="logo-divider" style={{ width: '2px', height: isScrolled ? '20px' : '55px', background: 'var(--border-color)', margin: '0 0.5rem', transition: 'height 0.3s ease' }}></div>
+                    <div className="logo-divider" style={{ width: '2px', height: isScrolled ? '24px' : '45px', background: 'var(--border-color)', margin: '0 1rem', transition: 'height 0.3s ease' }}></div>
 
                     <img
                         src={adLogo}
                         alt="Logo Asambleas de Dios"
                         className="logo-ad-white"
                         style={{
-                            height: isScrolled ? '18px' : '35px',
-                            transition: 'height 0.3s ease'
+                            height: isScrolled ? '22px' : '40px',
+                            transition: 'height 0.3s ease',
+                            objectFit: 'contain'
                         }}
                         onError={(e) => {
                             e.target.style.display = 'none';
@@ -78,25 +80,25 @@ const Navbar = () => {
                     {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
 
-                <div className={`nav-links ${isMenuOpen ? 'active' : ''}`} style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-                    <a href="#inicio" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: isScrolled ? '0.9rem' : '1.05rem', color: 'var(--text-primary)', transition: 'all 0.3s ease' }} className="nav-link">{t('navbar.home')}</a>
-                    <a href="#eventos" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: isScrolled ? '0.9rem' : '1.05rem', color: 'var(--text-primary)', transition: 'all 0.3s ease' }} className="nav-link">{t('navbar.events')}</a>
-                    <a href="#nosotros" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: isScrolled ? '0.9rem' : '1.05rem', color: 'var(--text-primary)', transition: 'all 0.3s ease' }} className="nav-link">{t('navbar.about')}</a>
-                    <a href="#liderazgo" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: isScrolled ? '0.9rem' : '1.05rem', color: 'var(--text-primary)', transition: 'all 0.3s ease' }} className="nav-link">{t('navbar.leadership')}</a>
-                    <a href="#horarios" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: isScrolled ? '0.9rem' : '1.05rem', color: 'var(--text-primary)', transition: 'all 0.3s ease' }} className="nav-link">{t('navbar.schedule')}</a>
-                    <a href="#contacto" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: isScrolled ? '0.9rem' : '1.05rem', color: 'var(--text-primary)', transition: 'all 0.3s ease' }} className="nav-link">{t('navbar.contact')}</a>
+                <div className={`nav-links ${isMenuOpen ? 'active' : ''}`} style={{ display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
+                    <a href="#inicio" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: isScrolled ? '0.85rem' : '0.95rem', color: 'var(--text-primary)', transition: 'all 0.3s ease' }} className="nav-link">{t('navbar.home')}</a>
+                    <a href="#eventos" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: isScrolled ? '0.85rem' : '0.95rem', color: 'var(--text-primary)', transition: 'all 0.3s ease' }} className="nav-link">{t('navbar.events')}</a>
+                    <a href="#nosotros" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: isScrolled ? '0.85rem' : '0.95rem', color: 'var(--text-primary)', transition: 'all 0.3s ease' }} className="nav-link">{t('navbar.about')}</a>
+                    <a href="#liderazgo" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: isScrolled ? '0.85rem' : '0.95rem', color: 'var(--text-primary)', transition: 'all 0.3s ease' }} className="nav-link">{t('navbar.leadership')}</a>
+                    <a href="#horarios" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: isScrolled ? '0.85rem' : '0.95rem', color: 'var(--text-primary)', transition: 'all 0.3s ease' }} className="nav-link">{t('navbar.schedule')}</a>
+                    <a href="#contacto" onClick={() => setIsMenuOpen(false)} style={{ fontWeight: '700', fontSize: isScrolled ? '0.85rem' : '0.95rem', color: 'var(--text-primary)', transition: 'all 0.3s ease' }} className="nav-link">{t('navbar.contact')}</a>
 
-                    <div className="nav-actions" style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', marginLeft: '1rem' }}>
-                        <button onClick={() => setIsDark(!isDark)} className="btn-icon" aria-label="Toggle Dark Mode" style={{ transform: isScrolled ? 'scale(0.9)' : 'scale(1.1)', transition: 'transform 0.3s ease' }}>
-                            {isDark ? <Sun size={22} color="currentColor" /> : <Moon size={22} color="currentColor" />}
+                    <div className="nav-actions" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', marginLeft: '0.5rem' }}>
+                        <button onClick={() => setIsDark(!isDark)} className="btn-icon" aria-label="Toggle Dark Mode" style={{ transform: isScrolled ? 'scale(0.85)' : 'scale(1)', transition: 'transform 0.3s ease' }}>
+                            {isDark ? <Sun size={20} color="currentColor" /> : <Moon size={20} color="currentColor" />}
                         </button>
-                        <button onClick={toggleLanguage} className="btn-icon" aria-label="Toggle Language" title={`Cambiar a ${i18n.language === 'es' ? 'English' : 'Español'}`} style={{ transform: isScrolled ? 'scale(0.9)' : 'scale(1.1)', transition: 'transform 0.3s ease' }}>
-                            <Globe size={22} color="currentColor" />
+                        <button onClick={toggleLanguage} className="btn-icon" aria-label="Toggle Language" title={`Cambiar a ${i18n.language === 'es' ? 'English' : 'Español'}`} style={{ transform: isScrolled ? 'scale(0.85)' : 'scale(1)', transition: 'transform 0.3s ease' }}>
+                            <Globe size={20} color="currentColor" />
                         </button>
                         <a href="#contacto" onClick={() => setIsMenuOpen(false)} className="btn-primary" style={{ 
-                            marginLeft: '1rem', 
-                            padding: isScrolled ? '0.4rem 1.2rem' : '0.65rem 1.8rem', 
-                            fontSize: isScrolled ? '0.9rem' : '1.05rem', 
+                            marginLeft: '0.5rem', 
+                            padding: isScrolled ? '0.4rem 1rem' : '0.6rem 1.4rem', 
+                            fontSize: isScrolled ? '0.85rem' : '0.95rem', 
                             boxShadow: '0 4px 15px rgba(220, 38, 38, 0.4)',
                             transition: 'all 0.3s ease'
                         }}>{t('navbar.visit')}</a>
