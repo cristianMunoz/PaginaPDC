@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { Facebook, Instagram } from 'lucide-react';
 
 // Importing the photo attached by the user (Pastor preaching)
 import heroBg from '../assets/media__1772566681362.jpg';
@@ -47,10 +48,27 @@ const Hero = () => {
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.4 }}>
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
+                    
                     <a href="#horarios" className="btn-primary" style={{ fontSize: '1.2rem', padding: '1rem 2.5rem' }}>
                         {t('hero.btn')}
                     </a>
+
+                    <a href="https://www.facebook.com/share/1Kq8YP8Mhk/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" 
+                       style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '3.5rem', height: '3.5rem', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', color: 'white', transition: 'all 0.3s ease', border: '1px solid rgba(255,255,255,0.2)' }} 
+                       onMouseOver={e => {e.currentTarget.style.backgroundColor = '#1877F2'; e.currentTarget.style.transform = 'scale(1.1)'; e.currentTarget.style.borderColor = '#1877F2';}} 
+                       onMouseOut={e => {e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';}}>
+                        <Facebook size={24} />
+                    </a>
+
+                    <a href="https://www.instagram.com/ccristianapuertadelcielo?igsh=aGF1MzJibWlrd3Nj" target="_blank" rel="noopener noreferrer" 
+                       style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '3.5rem', height: '3.5rem', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', color: 'white', transition: 'all 0.3s ease', border: '1px solid rgba(255,255,255,0.2)' }} 
+                       onMouseOver={e => {e.currentTarget.style.background = 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)'; e.currentTarget.style.transform = 'scale(1.1)'; e.currentTarget.style.borderColor = 'transparent';}} 
+                       onMouseOut={e => {e.currentTarget.style.background = 'rgba(255,255,255,0.1)'; e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';}}>
+                        <Instagram size={24} />
+                    </a>
+
                 </motion.div>
             </div>
         </section>
