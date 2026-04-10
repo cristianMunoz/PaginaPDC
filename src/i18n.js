@@ -59,7 +59,12 @@ const resources = {
                 "pastor_title": "Pastor Principal",
                 "description": "Nos guía espiritualmente bajo la cobertura de las Asambleas de Dios, sirviendo con amor a la congregación y a la localidad de Usme.",
                 "fb_link": "Seguir",
-                "ig_link": "Seguir"
+                "ig_link": "Seguir",
+                "hq": "Sede Central Santa Librada",
+                "bosque": "Sede El Bosque",
+                "sucre": "Sede Sucre",
+                "lead_pastors": "Pastores Principales",
+                "local_pastors": "Pastores Locales"
             },
             "contact": {
                 "title": "Contacto y Ubicación",
@@ -83,7 +88,8 @@ const resources = {
                 "val_phone": "Por favor, ingresa un número de teléfono válido."
             },
             "footer": {
-                "rights": "Iglesia Cristiana Puerta del Cielo. Todos los derechos reservados."
+                "rights": "Iglesia Cristiana Puerta del Cielo. Todos los derechos reservados.",
+                "ad_desc": "Pertenecientes al concilio de iglesias de Asambleas de Dios Colombia."
             }
         }
     },
@@ -101,7 +107,8 @@ const resources = {
             "hero": {
                 "title": "Christian Church Gate of Heaven",
                 "subtitle": "A church made up of people who love God and their neighbor. Welcome to our family, central campus Santa Librada.",
-                "btn": "See our schedule"
+                "btn": "See our schedule",
+                "follow": "Follow us on our social networks"
             },
             "about": {
                 "title": "Identity",
@@ -143,7 +150,12 @@ const resources = {
                 "pastor_title": "Lead Pastor",
                 "description": "Guides us spiritually under the covering of the Assemblies of God, serving the congregation and the Usme locality with love.",
                 "fb_link": "Follow",
-                "ig_link": "Follow"
+                "ig_link": "Follow",
+                "hq": "Central Campus Santa Librada",
+                "bosque": "El Bosque Campus",
+                "sucre": "Sucre Campus",
+                "lead_pastors": "Lead Pastors",
+                "local_pastors": "Campus Pastors"
             },
             "contact": {
                 "title": "Contact and Location",
@@ -167,7 +179,8 @@ const resources = {
                 "val_phone": "Please enter a valid phone number."
             },
             "footer": {
-                "rights": "Christian Church Gate of Heaven. All rights reserved."
+                "rights": "Christian Church Gate of Heaven. All rights reserved.",
+                "ad_desc": "Belonging to the council of churches of Assemblies of God Colombia."
             }
         }
     }

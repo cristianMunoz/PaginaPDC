@@ -6,24 +6,24 @@ import bgImage from '../assets/leadership_bg.png';
 
 const pastorsData = [
     {
-        sede: 'Sede Central Santa Librada',
+        sede: 'hq',
         names: 'Ps. Alex Gomez y Doris Gallego',
-        title: 'Pastores Principales',
+        title: 'lead_pastors',
         fb: 'https://www.facebook.com/share/18C9YKXcaT/',
         ig: 'https://www.instagram.com/alexmiguelgomez?igsh=MTdkNWp1aTNmN2ZhaA==',
         imgId: 'librada.jpeg'
     },
     {
-        sede: 'Sede El Bosque',
+        sede: 'bosque',
         names: 'Ps. Miguel Gómez y Dayanna Quintero',
-        title: 'Pastores Locales',
+        title: 'local_pastors',
         fb: null,
         imgId: 'bosque.jpeg'
     },
     {
-        sede: 'Sede Sucre',
+        sede: 'sucre',
         names: 'Ps. Arnoldo Ariza y Marcela Quiroga',
-        title: 'Pastores Locales',
+        title: 'local_pastors',
         fb: null,
         imgId: 'sucre.jpeg'
     }
@@ -88,7 +88,7 @@ const Leadership = () => {
                                 boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
                                 zIndex: 2
                             }}>
-                                {pastor.sede}
+                                {t('leadership.' + pastor.sede)}
                             </div>
 
                             {/* Foto o Icono */}
@@ -120,7 +120,7 @@ const Leadership = () => {
                             </div>
 
                             <h3 style={{ fontSize: '1.45rem', color: 'var(--text-primary)', marginBottom: '0.5rem', lineHeight: '1.3' }}>{pastor.names}</h3>
-                            <p style={{ fontSize: '1.1rem', color: 'var(--accent)', fontWeight: '600', marginBottom: '1.5rem' }}>{pastor.title}</p>
+                            <p style={{ fontSize: '1.1rem', color: 'var(--accent)', fontWeight: '600', marginBottom: '1.5rem' }}>{t('leadership.' + pastor.title)}</p>
 
                             <div style={{ display: 'flex', gap: '0.8rem', justifyContent: 'center' }}>
                                 {pastor.fb && (

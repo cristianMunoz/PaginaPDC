@@ -2,6 +2,9 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Facebook, Instagram } from 'lucide-react';
 
+import churchLogoWhite from '../assets/logo_digital_final.png';
+import adLogo from '../assets/ad_logo_white.png';
+
 const Footer = () => {
     const { t } = useTranslation();
 
@@ -11,7 +14,14 @@ const Footer = () => {
                 <div>
                     <h3 style={{ marginBottom: '1.5rem', color: 'var(--accent)', fontSize: '1.4rem' }}>Puerta del Cielo</h3>
                     <p style={{ color: '#94A3B8', marginBottom: '0.5rem' }}>{t('contact.address_desc')}</p>
-                    <p style={{ color: '#94A3B8' }}>Carrera 9a 75-56 sur</p>
+                    <p style={{ color: '#94A3B8', marginBottom: '2rem' }}>Carrera 9a 75-56 sur</p>
+                    <img 
+                        src={churchLogoWhite} 
+                        alt="Puerta del Cielo" 
+                        style={{ height: '60px', marginLeft: '-10px', display: 'block', filter: 'opacity(0.6)', transition: 'all 0.3s ease', cursor: 'default' }} 
+                        onMouseOver={e => {e.currentTarget.style.filter = 'opacity(1)'; e.currentTarget.style.transform = 'scale(1.05)';}}
+                        onMouseOut={e => {e.currentTarget.style.filter = 'opacity(0.6)'; e.currentTarget.style.transform = 'scale(1)';}}
+                    />
                 </div>
                 <div>
                     <h3 style={{ marginBottom: '1.5rem', color: 'var(--accent)', fontSize: '1.4rem' }}>{t('contact.title')}</h3>
@@ -28,7 +38,14 @@ const Footer = () => {
                 </div>
                 <div>
                     <h3 style={{ marginBottom: '1.5rem', color: 'var(--accent)', fontSize: '1.4rem' }}>Asambleas de Dios</h3>
-                    <p style={{ color: '#94A3B8', fontSize: '0.95rem', lineHeight: '1.6' }}>Pertenecientes al concilio de iglesias de Asambleas de Dios Colombia.</p>
+                    <p style={{ color: '#94A3B8', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '2rem' }}>{t('footer.ad_desc')}</p>
+                    <img 
+                        src={adLogo} 
+                        alt="Asambleas de Dios" 
+                        style={{ height: '40px', filter: 'opacity(0.6)', transition: 'all 0.3s ease' }} 
+                        onMouseOver={e => {e.currentTarget.style.filter = 'opacity(1)'; e.currentTarget.style.transform = 'scale(1.05)';}}
+                        onMouseOut={e => {e.currentTarget.style.filter = 'opacity(0.6)'; e.currentTarget.style.transform = 'scale(1)';}}
+                    />
                 </div>
             </div>
             <div className="container" style={{ textAlign: 'center', borderTop: '1px solid #1E293B', paddingTop: '2.5rem', color: '#64748B', fontSize: '0.95rem' }}>
