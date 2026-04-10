@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Moon, Sun, Globe, Menu, X } from 'lucide-react';
 
-import churchLogo from '../assets/media__1772557959477.jpg';
+import churchLogo from '../assets/logo_digital_final.png';
 import adLogo from '../assets/ad_logo_white.png';
 
 const Navbar = () => {
