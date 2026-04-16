@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Facebook, Instagram } from 'lucide-react';
+import { Facebook, Instagram, MapPin } from 'lucide-react';
 
 // Importing the photo attached by the user (Pastor preaching)
 import heroBg from '../assets/media__1772566681362.jpg';
@@ -33,9 +33,18 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    style={{ fontSize: '4.5rem', marginBottom: '1.5rem', color: heroBg ? '#FFFFFF' : 'var(--primary)', textShadow: heroBg ? '0 4px 6px rgba(0,0,0,0.5)' : 'none' }}>
+                    style={{ fontSize: '4.5rem', marginBottom: '0.5rem', color: heroBg ? '#FFFFFF' : 'var(--primary)', textShadow: heroBg ? '0 4px 6px rgba(0,0,0,0.5)' : 'none' }}>
                     {t('hero.title')}
                 </motion.h1>
+
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10px)', borderRadius: '2rem', border: '1px solid rgba(255, 255, 255, 0.2)', marginBottom: '1.5rem' }}>
+                    <MapPin size={20} color="#E2E8F0" />
+                    <span style={{ color: '#E2E8F0', fontSize: '1.2rem', fontWeight: '500', textShadow: '0 1px 2px rgba(0,0,0,0.5)', letterSpacing: '0.05em' }}>Bogotá, Colombia</span>
+                </motion.div>
 
                 <motion.p
                     initial={{ opacity: 0, y: 30 }}
